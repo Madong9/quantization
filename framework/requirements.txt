@@ -1,0 +1,1 @@
+freqtrade # 安装 Freqtrade 主程序和策略运行所需依赖。

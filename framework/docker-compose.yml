@@ -1,0 +1,17 @@
+services: # 定义 Docker Compose 服务集合。
+  freqtrade: # 定义名为 freqtrade 的交易机器人服务。
+    image: freqtradeorg/freqtrade:stable # 使用 Freqtrade 官方 stable 镜像。
+    restart: unless-stopped # 容器异常退出后自动重启，手动停止后不再重启。
+    container_name: freqtrade-binance-ema # 固定容器名称，方便 docker 命令定位。
+    volumes: # 配置宿主机和容器之间的目录挂载。
+      - "./user_data:/freqtrade/user_data" # 把本地 user_data 挂载到容器内 Freqtrade 用户目录。
+    env_file: # 指定环境变量文件列表。
+      - .env # 从 .env 文件读取 API key 等环境变量。
+    command: # 覆盖容器默认命令，启动 Freqtrade 交易模式。
+      - trade # 运行 Freqtrade trade 子命令。
+      - --config # 声明下一项是配置文件参数值。
+      - /freqtrade/user_data/config.json # 指定容器内配置文件路径。
+      - --strategy # 声明下一项是策略类参数值。
+      - EmaCrossFuturesStrategy # 指定要运行的策略类。
+      - --strategy-path # 声明下一项是策略目录参数值。
+      - /freqtrade/user_data/strategies # 指定容器内策略目录。

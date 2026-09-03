@@ -1,0 +1,55 @@
+{
+  "db_url": "sqlite:///user_data/tradesv3.testnet_rl.sqlite",
+  "exchange": {
+    "ccxt_config": {
+      "enableRateLimit": true,
+      "options": {
+        "defaultType": "future",
+        "adjustForTimeDifference": true,
+        "fetchCurrencies": false,
+        "fetchMargins": false,
+        "fetchMarkets": {
+          "types": [
+            "linear"
+          ]
+        }
+      },
+      "urls": {
+        "api": {
+          "fapiPublic": "https://demo-fapi.binance.com/fapi/v1",
+          "fapiPublicV2": "https://demo-fapi.binance.com/fapi/v2",
+          "fapiPublicV3": "https://demo-fapi.binance.com/fapi/v3",
+          "fapiPrivate": "https://demo-fapi.binance.com/fapi/v1",
+          "fapiPrivateV2": "https://demo-fapi.binance.com/fapi/v2",
+          "fapiPrivateV3": "https://demo-fapi.binance.com/fapi/v3",
+          "fapiData": "https://demo-fapi.binance.com/futures/data"
+        }
+      }
+    },
+    "ccxt_async_config": {
+      "enableRateLimit": true,
+      "options": {
+        "defaultType": "future",
+        "adjustForTimeDifference": true,
+        "fetchCurrencies": false,
+        "fetchMargins": false,
+        "fetchMarkets": {
+          "types": [
+            "linear"
+          ]
+        }
+      },
+      "urls": {
+        "api": {
+          "fapiPublic": "https://demo-fapi.binance.com/fapi/v1",
+          "fapiPublicV2": "https://demo-fapi.binance.com/fapi/v2",
+          "fapiPublicV3": "https://demo-fapi.binance.com/fapi/v3",
+          "fapiPrivate": "https://demo-fapi.binance.com/fapi/v1",
+          "fapiPrivateV2": "https://demo-fapi.binance.com/fapi/v2",
+          "fapiPrivateV3": "https://demo-fapi.binance.com/fapi/v3",
+          "fapiData": "https://demo-fapi.binance.com/futures/data"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.env
+**/.env
+**/.env.local
+**/.env.*.local
+
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local credentials and machine-specific files.
+*.pem
+*.p12
+id_rsa
+id_ed25519
+
+# Explicitly excluded release payloads.
+/public_release_20260630/
+/public_release_20260630.part1.rar
+/public_release_20260630.part2.rar
+
+# Generated market data, runtime state, reports, and training artifacts.
+/framework/user_data/data/
+/framework/user_data/backtest_results/
+/framework/user_data/*.sqlite*
+/framework/user_data/rl/logs/
+/framework/user_data/rl/models/checkpoint.pt
+/framework0/reports/
+*.tfevents.*
+
+# Local document with author metadata; it is not part of the source project.
+/framework/WPS文字文档.wps
